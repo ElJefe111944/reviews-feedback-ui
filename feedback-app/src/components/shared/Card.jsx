@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function Card({ children, reverse }) {
   return (
@@ -6,3 +7,8 @@ export default function Card({ children, reverse }) {
   )
 }
  
+
+Card.propTypes = {
+    children: PropTypes.node.isRequired,
+    reverse: PropTypes.bool,
+}
