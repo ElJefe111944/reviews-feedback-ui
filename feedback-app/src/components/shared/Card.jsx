@@ -11,4 +11,4 @@ export default function Card({ children, reverse }) {
 Card.propTypes = {
     children: PropTypes.node.isRequired,
     reverse: PropTypes.bool,
-}
+} 
