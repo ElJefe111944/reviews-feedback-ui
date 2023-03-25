@@ -25,6 +25,12 @@ export const FeedbackProvider = ({children}) => {
         }
     ])
 
+    // feedback to be edited
+    const [feedbackEdit, setFeedbackEdit] = useState({
+        item: {},
+        edit: false,
+    })
+
     // add feedback
     const addFeedback = (newFeedback) => {
         // add id to new feedback object 
@@ -41,10 +47,19 @@ export const FeedbackProvider = ({children}) => {
         }        
     }
 
+    // edit feedback - set item to be updated
+    const editFeedback = (item) => {
+        setFeedbackEdit({
+            item,
+            edit: true,
+        })
+    };
+
     return <FeedbackContext.Provider value={{
         feedback,
         deleteFeedback,
         addFeedback,
+        editFeedback,
     }}>
         {children}
     </FeedbackContext.Provider>
