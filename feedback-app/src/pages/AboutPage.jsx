@@ -12,7 +12,7 @@ function AboutPage() {
             <p>Verison: 1.0.0</p>
 
             <p>
-                <Link to="/">Back to Home</Link>
+                <Link style={{color: "black"}} to="/">Back to Home</Link>
             </p>
         </div>
     </Card>
